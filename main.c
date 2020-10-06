@@ -1,49 +1,46 @@
-#include <pay.h>			
+int main()
+{
+int choice,fibonacci_limit,factorial_input,factorial_output,prime_input,prime_output;
+printf("From the below option choose the mathematical operation you need to perform\n");
+printf("1.Fibonacci series\n");
+printf("2.Find factorial of the number\n");
+printf("3.Check whether the number is prime or not.\n");
+printf("\n Enter your choice - ");
+scanf("%d",&choice);
+switch(choice)
+    {
+        case 1:
+            printf("\n----------------------\n");
+            printf("\nEnter fibonacci limit\n");
+            scanf("%d",&fibonacci_limit);
+            fibonacci_func(fibonacci_limit);
+            break;
 
-void main()
-	{
-	  int i,n;
-	  char ch;
+        case 2:
+            printf("\n----------------------\n");
+            printf("\nEnter the number to know factorial\n");
+            scanf("%d",&factorial_input);
+            factorial_output = factorial_func(factorial_input);
+            printf("The factorial is %d",factorial_output);
+            break;
 
-	  printf("\nPAYMENT SYSTEM:\n");
-	  printf("\n1: ADD ACOOUNT");
-	  printf("\n2: SEARCH CUSTOMER");
-	  printf("\n3: EXIT");
+        case 3:
+            printf("\n----------------------\n");
+            printf("\nEnter the number to know whether its prime or not.\n");
+            scanf("%d",&prime_input);
+            prime_output = prime_func(prime_input);
+            if(prime_output==1)
+            {
+                printf("\nIt's a prime number\n");
+            }
+            else
+            {
+                printf("\nIt's not a prime number");
+            }
+            break;
+        default:
+            printf("\nPlease choose the correct option\n");
+            break;
+    }
 
-	  do{
-	       printf("\nOPTION: ");
-	       ch=getchar();
-	  }while(ch<='0' || ch>'3');
-
-	  switch(ch){
-		case '1':
-
-			printf("\nNO. OF ACCOUNTS: ");
-			scanf("%d",&n);
-			for(i=0;i<n;i++){
-				input();
-				if(customer.payment>0)
-					customer.acct_type=(customer.payment > customer.oldbalance)? 'I': 'S';
-				else
-					customer.acct_type=(customer.oldbalance>0)?'S' : 'N';
-				customer.newbalance=customer.oldbalance - customer.payment;
-				writefile();
-			}
-			main();
-		case '2':
-
-			printf("\nSEARCH BY? ");
-			printf("\n1: Customer number");
-			printf("\n2: Customer name");
-			search();
-			ch=getchar();
-			main();
-		case '3':
-			exit(1);
-	  }
- }
-
-
-
-
-
+}
