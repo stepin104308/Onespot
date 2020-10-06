@@ -1,16 +1,16 @@
 # Name of the project
-PROJECT_NAME = Payment
+PROJECT_NAME = Function
 
 # Output directory
 BUILD = build
 
 # All source code files
 SRC = main.c\
-src/pay.c\
+src/function.c\
 
 # All test source files
-TEST_SRC = src/pay.c\
-test/test_pay.c
+TEST_SRC = src/function.c\
+test/test_function.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
