@@ -1,3 +1,5 @@
+#include<function.h>
+
 int main()
 {
 int choice,fibonacci_limit,factorial_input,factorial_output,prime_input,prime_output;
