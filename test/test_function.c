@@ -6,8 +6,8 @@
 #define PROJECT_NAME "Function"
 
 /* Prototypes for all the test functions */
-void test_factorial(int);
-void test_prime(int);
+int test_factorial(void);
+int test_prime(int);
 
 
 /* Start of the application test */
@@ -37,7 +37,7 @@ int main() {
   return 0;
 }
 /* Write all the test functions */
-void test_factorial(int) {
+int test_factorial(void) {
   CU_ASSERT(3628800 == factorial_func(10));
   CU_ASSERT(40320 == factorial_func(8));
   CU_ASSERT(6 == factorial_func(3));
@@ -48,7 +48,7 @@ void test_factorial(int) {
   CU_ASSERT(100 == factorial_func(5));
 }
 
-void test_prime(int) {
+int test_prime(void) {
   CU_ASSERT(1 == prime_func(7));
   CU_ASSERT(0 == prime_func(52));
   CU_ASSERT(1 == prime_func(3));
